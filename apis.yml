@@ -1,0 +1,42 @@
+aid: todo-group
+name: TODO Group
+description: >-
+  The TODO Group is an open community under the Linux Foundation of practitioners collaborating on best practices, tools, and guidance for running open source program offices (OSPOs). It provides guides, case studies, and the OSPO landscape for organizations managing their open source strategies.
+type: Index
+position: Consumer
+access: 3rd-Party
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - OSPO
+  - Open Source
+  - Community
+  - Linux Foundation
+created: '2026-03-16'
+modified: '2026-03-16'
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/todo-group/refs/heads/main/apis.yml
+specificationVersion: '0.19'
+apis:
+  - aid: todo-group:todo-group-api
+    name: TODO Group API
+    description: >-
+      API for accessing TODO Group resources, guides, case studies, and OSPO landscape tools for managing open source program offices and strategies.
+    humanURL: https://todogroup.org/guides/
+    tags:
+      - OSPO
+      - Open Source
+    properties:
+      - type: Documentation
+        url: https://todogroup.org/guides/
+common:
+  - type: Documentation
+    name: TODO Group Documentation
+    description: Official documentation for TODO Group.
+    url: https://todogroup.org/guides/
+  - type: GitHubOrg
+    name: TODO Group GitHub
+    description: Source code and repositories for TODO Group.
+    url: https://github.com/todogroup
+maintainers:
+  - FN: Kin Lane
+    email: info@apievangelist.com
