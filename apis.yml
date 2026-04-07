@@ -7,10 +7,10 @@ position: Consumer
 access: 3rd-Party
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - OSPO
-  - Open Source
   - Community
   - Linux Foundation
+  - Open Source
+  - OSPO
 created: '2026-03-16'
 modified: '2026-03-16'
 url: >-
@@ -23,8 +23,8 @@ apis:
       API for accessing TODO Group resources, guides, case studies, and OSPO landscape tools for managing open source program offices and strategies.
     humanURL: https://todogroup.org/guides/
     tags:
-      - OSPO
       - Open Source
+      - OSPO
     properties:
       - type: Documentation
         url: https://todogroup.org/guides/
