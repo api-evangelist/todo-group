@@ -1,0 +1,209 @@
+vocabulary: "1.0.0"
+
+info:
+  provider: "TODO Group"
+  description: "Unified vocabulary for TODO Group OSPO tools, resources, and community programs covering open source program office management."
+  created: "2026-05-03"
+  modified: "2026-05-03"
+
+operational:
+  tools:
+    - namespace: repolinter
+      version: "0.11.0"
+      runtime: node
+      status: active
+      description: Open source repository linting tool
+      installUrl: https://www.npmjs.com/package/repolinter
+    - namespace: repolinter-action
+      version: "2.0.0"
+      runtime: github-actions
+      status: active
+      description: GitHub Action wrapping Repolinter for CI/CD integration
+      installUrl: https://github.com/marketplace/actions/repolinter-action
+    - namespace: ospolandscape
+      version: "1.0.0"
+      runtime: web
+      status: active
+      description: Interactive OSPO ecosystem landscape tool
+      installUrl: https://landscape.todogroup.org/
+
+  resources:
+    - name: Repository
+      tool: repolinter
+      actions: [lint, validate, fix]
+      description: A code repository subject to open source compliance linting
+    - name: Ruleset
+      tool: repolinter
+      actions: [create, load, apply]
+      description: A configurable set of rules applied during repository linting
+    - name: LintResult
+      tool: repolinter
+      actions: [get, format]
+      description: Output from a Repolinter lint operation
+    - name: Rule
+      tool: repolinter
+      actions: [create, enable, disable]
+      description: An individual compliance check within a Repolinter ruleset
+    - name: Organization
+      tool: ospolandscape
+      actions: [list, get]
+      description: An organization listed in the OSPO Landscape as adopter or tool provider
+    - name: Employee
+      tool: ospo-career-path
+      actions: [evaluate, progress]
+      description: An OSPO professional with defined role and competency level
+    - name: Guide
+      tool: ospo-guides
+      actions: [list, get, contribute]
+      description: A practitioner guide document for OSPO best practices
+
+  actions:
+    - name: lint
+      pattern: validate
+      description: Analyze a repository against a ruleset and report findings
+    - name: validate
+      pattern: check
+      description: Verify a repository or artifact meets defined standards
+    - name: fix
+      pattern: remediate
+      description: Automatically remediate identified compliance issues
+    - name: list
+      pattern: read
+      description: Retrieve a collection of items
+    - name: get
+      pattern: read
+      description: Retrieve a single item by identifier
+    - name: create
+      pattern: write
+      description: Create a new resource or document
+    - name: contribute
+      pattern: write
+      description: Submit a contribution to a community resource
+
+  parameters:
+    identifiers:
+      - name: repositoryPath
+        type: string
+        description: Local filesystem path or git URL of a repository to lint
+      - name: rulesetFile
+        type: string
+        description: Path to a Repolinter ruleset JSON/YAML configuration file
+      - name: rulesetUrl
+        type: string
+        format: uri
+        description: URL of a remote Repolinter ruleset configuration
+    options:
+      - name: format
+        type: string
+        enum: [default, json, markdown]
+        description: Output format for Repolinter lint results
+      - name: allowPaths
+        type: array
+        description: Restrict linting scope to specific paths within a repository
+      - name: dryRun
+        type: boolean
+        description: Preview fixes without applying them
+
+concepts:
+  ospo_terms:
+    - name: OSPO
+      fullName: Open Source Program Office
+      description: A dedicated team within an organization responsible for managing open source strategy, compliance, community engagement, and contributions
+    - name: TODO Group
+      description: An open community of OSPO practitioners under the Linux Foundation, providing shared resources and best practices
+    - name: OSPOlogy
+      description: The TODO Group's monthly webinar and working group series for OSPO practitioners
+    - name: OSPO Landscape
+      description: An interactive map of organizations with OSPOs and tools supporting OSPO operations
+    - name: Repolinter
+      description: An open source tool for linting repositories against configurable compliance rulesets
+    - name: Inbound Open Source
+      description: Open source software consumed and used by an organization
+    - name: Outbound Open Source
+      description: Software that an organization releases as open source to the community
+    - name: OSPO Maturity Model
+      description: A framework describing progressive levels of OSPO capability and organizational commitment
+    - name: Open Source Strategy
+      description: A formal organizational policy defining how open source is consumed, contributed, and released
+    - name: CLA
+      fullName: Contributor License Agreement
+      description: A legal agreement signed by contributors granting rights to use their contributions
+    - name: DCO
+      fullName: Developer Certificate of Origin
+      description: A certification that contributors have the right to submit their contribution
+    - name: Compliance
+      description: Adherence to open source license obligations and organizational open source policies
+
+  compliance_categories:
+    - name: License Compliance
+      description: Ensuring open source licenses are respected and obligations fulfilled
+    - name: Repository Standards
+      description: Maintaining required files and documentation in open source repositories
+    - name: Security Hygiene
+      description: Vulnerability scanning and secure development practices for open source code
+    - name: Community Health
+      description: Metrics and practices for maintaining welcoming and productive open source communities
+    - name: Contribution Governance
+      description: Policies and processes for managing contributions to open source projects
+
+capability:
+  workflows:
+    - name: Repository Compliance Check
+      description: Automated linting of repositories for open source best practices
+      tools: [repolinter, repolinter-action]
+      personas: [OSPO Manager, Developer, Platform Engineer]
+    - name: OSPO Landscape Discovery
+      description: Mapping and exploring the OSPO ecosystem for adopters and tools
+      tools: [ospolandscape]
+      personas: [OSPO Manager, Executive]
+    - name: OSPO Program Launch
+      description: Establishing a new Open Source Program Office using guides and frameworks
+      tools: [ospo-guides, ospo-career-path]
+      personas: [OSPO Manager, Executive, HR Manager]
+
+  personas:
+    - id: ospo-manager
+      name: OSPO Manager
+      description: Leads an organization's open source program office and strategy
+      workflows: [Repository Compliance Check, OSPO Landscape Discovery, OSPO Program Launch]
+    - id: developer
+      name: Developer
+      description: Engineers contributing to or consuming open source software
+      workflows: [Repository Compliance Check]
+    - id: platform-engineer
+      name: Platform Engineer
+      description: Infrastructure engineer implementing CI/CD and compliance automation
+      workflows: [Repository Compliance Check]
+    - id: executive
+      name: Executive
+      description: Leadership stakeholder defining organizational open source strategy
+      workflows: [OSPO Landscape Discovery, OSPO Program Launch]
+    - id: hr-manager
+      name: HR Manager
+      description: Human resources professional implementing OSPO career frameworks
+      workflows: [OSPO Program Launch]
+
+  domains:
+    - name: Repository Compliance
+      description: Automated linting and validation of open source repository standards
+      tools: [repolinter, repolinter-action]
+    - name: OSPO Ecosystem Intelligence
+      description: Mapping and discovery of OSPO adopters, tools, and community resources
+      tools: [ospolandscape]
+    - name: OSPO Program Management
+      description: Guidance, frameworks, and career paths for running effective OSPOs
+      tools: [ospo-guides, ospo-career-path, ospology]
+
+crossReference:
+  - resource: Repository
+    operations: [lint, validate]
+    workflows: [Repository Compliance Check]
+    personas: [OSPO Manager, Developer, Platform Engineer]
+  - resource: Organization
+    operations: [list, get]
+    workflows: [OSPO Landscape Discovery]
+    personas: [OSPO Manager, Executive]
+  - resource: Guide
+    operations: [list, get]
+    workflows: [OSPO Program Launch]
+    personas: [OSPO Manager, Executive]

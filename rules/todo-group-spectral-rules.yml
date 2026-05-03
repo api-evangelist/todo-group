@@ -1,0 +1,305 @@
+rules:
+
+  # -----------------------------------------------------------------------
+  # 1. Info Object Rules
+  # -----------------------------------------------------------------------
+
+  todo-group-info-title-present:
+    description: API must have a title in the info object.
+    message: "info.title is required."
+    severity: error
+    given: "$.info"
+    then:
+      field: title
+      function: truthy
+
+  todo-group-info-title-title-case:
+    description: API title should use Title Case.
+    message: "info.title should use Title Case (capitalize first letter of each word)."
+    severity: warn
+    given: "$.info.title"
+    then:
+      function: pattern
+      functionOptions:
+        match: "^[A-Z][a-zA-Z0-9 ]*$"
+
+  todo-group-info-description-present:
+    description: API must have a description in the info object.
+    message: "info.description is required."
+    severity: error
+    given: "$.info"
+    then:
+      field: description
+      function: truthy
+
+  todo-group-info-version-present:
+    description: API must declare a version.
+    message: "info.version is required."
+    severity: error
+    given: "$.info"
+    then:
+      field: version
+      function: truthy
+
+  todo-group-info-contact-present:
+    description: API info should include contact information.
+    message: "info.contact is recommended for open source tools."
+    severity: warn
+    given: "$.info"
+    then:
+      field: contact
+      function: truthy
+
+  todo-group-info-license-present:
+    description: Open source APIs must declare a license.
+    message: "info.license is required for TODO Group open source tools."
+    severity: error
+    given: "$.info"
+    then:
+      field: license
+      function: truthy
+
+  # -----------------------------------------------------------------------
+  # 2. Path Naming Rules
+  # -----------------------------------------------------------------------
+
+  todo-group-paths-kebab-case:
+    description: API paths must use kebab-case for multi-word path segments.
+    message: "Path segments should use kebab-case (e.g., /open-source-tools not /openSourceTools)."
+    severity: warn
+    given: "$.paths[*]~"
+    then:
+      function: pattern
+      functionOptions:
+        match: "^(/[a-z0-9{}-]+)+$"
+
+  todo-group-paths-no-trailing-slash:
+    description: API paths must not end with a trailing slash.
+    message: "Path must not end with a trailing slash."
+    severity: warn
+    given: "$.paths[*]~"
+    then:
+      function: pattern
+      functionOptions:
+        notMatch: "/$"
+
+  todo-group-paths-no-versioning-in-path:
+    description: API versioning should be in the path with a version prefix.
+    message: "Use /v{n}/ versioning prefix (e.g., /v1/repositories)."
+    severity: info
+    given: "$.paths[*]~"
+    then:
+      function: pattern
+      functionOptions:
+        match: "^/v[0-9]+"
+
+  # -----------------------------------------------------------------------
+  # 3. Operation Rules
+  # -----------------------------------------------------------------------
+
+  todo-group-operation-summary-present:
+    description: Every operation must have a summary.
+    message: "Operation summary is required."
+    severity: error
+    given: "$.paths[*][get,post,put,patch,delete,options,head]"
+    then:
+      field: summary
+      function: truthy
+
+  todo-group-operation-summary-title-case:
+    description: Operation summaries should use Title Case.
+    message: "Operation summary should use Title Case."
+    severity: warn
+    given: "$.paths[*][get,post,put,patch,delete,options,head].summary"
+    then:
+      function: pattern
+      functionOptions:
+        match: "^[A-Z]"
+
+  todo-group-operation-description-present:
+    description: Every operation should have a description.
+    message: "Operation description is recommended for open source tool APIs."
+    severity: warn
+    given: "$.paths[*][get,post,put,patch,delete,options,head]"
+    then:
+      field: description
+      function: truthy
+
+  todo-group-operation-id-present:
+    description: Every operation must have an operationId.
+    message: "operationId is required for SDK generation and tooling."
+    severity: error
+    given: "$.paths[*][get,post,put,patch,delete,options,head]"
+    then:
+      field: operationId
+      function: truthy
+
+  todo-group-operation-id-camel-case:
+    description: operationId should use camelCase.
+    message: "operationId should use camelCase (e.g., listRepositories, lintRepository)."
+    severity: warn
+    given: "$.paths[*][get,post,put,patch,delete,options,head].operationId"
+    then:
+      function: pattern
+      functionOptions:
+        match: "^[a-z][a-zA-Z0-9]*$"
+
+  todo-group-operation-tags-present:
+    description: Every operation should have at least one tag.
+    message: "Operation should include at least one tag for grouping."
+    severity: warn
+    given: "$.paths[*][get,post,put,patch,delete,options,head]"
+    then:
+      field: tags
+      function: truthy
+
+  # -----------------------------------------------------------------------
+  # 4. Response Rules
+  # -----------------------------------------------------------------------
+
+  todo-group-response-success-present:
+    description: Every operation must define a success response.
+    message: "At least one 2xx response is required."
+    severity: error
+    given: "$.paths[*][get,post,put,patch,delete].responses"
+    then:
+      function: schema
+      functionOptions:
+        schema:
+          type: object
+          minProperties: 1
+
+  todo-group-response-error-present:
+    description: Operations should define error responses.
+    message: "Define at least one error response (4xx or 5xx)."
+    severity: warn
+    given: "$.paths[*][get,post,put,patch,delete].responses"
+    then:
+      function: schema
+      functionOptions:
+        schema:
+          type: object
+
+  todo-group-get-response-200:
+    description: GET operations must return a 200 success response.
+    message: "GET operations must define a 200 response."
+    severity: error
+    given: "$.paths[*].get.responses"
+    then:
+      field: "200"
+      function: truthy
+
+  todo-group-post-response-201:
+    description: POST operations creating resources should return 201.
+    message: "POST operations should define a 201 Created response."
+    severity: warn
+    given: "$.paths[*].post.responses"
+    then:
+      field: "201"
+      function: truthy
+
+  # -----------------------------------------------------------------------
+  # 5. Schema Rules
+  # -----------------------------------------------------------------------
+
+  todo-group-schema-title-present:
+    description: Schema components should have a title.
+    message: "Schema should have a title describing the resource."
+    severity: warn
+    given: "$.components.schemas[*]"
+    then:
+      field: title
+      function: truthy
+
+  todo-group-schema-description-present:
+    description: Schema components should have a description.
+    message: "Schema should have a description for documentation."
+    severity: warn
+    given: "$.components.schemas[*]"
+    then:
+      field: description
+      function: truthy
+
+  todo-group-schema-properties-described:
+    description: Schema properties should have descriptions.
+    message: "Schema property should include a description."
+    severity: info
+    given: "$.components.schemas[*].properties[*]"
+    then:
+      field: description
+      function: truthy
+
+  todo-group-schema-type-present:
+    description: Schema components should declare a type.
+    message: "Schema should declare a type."
+    severity: warn
+    given: "$.components.schemas[*]"
+    then:
+      field: type
+      function: truthy
+
+  # -----------------------------------------------------------------------
+  # 6. Security Rules
+  # -----------------------------------------------------------------------
+
+  todo-group-security-schemes-present:
+    description: API should define security schemes.
+    message: "Define security schemes in components.securitySchemes."
+    severity: warn
+    given: "$.components"
+    then:
+      field: securitySchemes
+      function: truthy
+
+  todo-group-operation-security-defined:
+    description: Operations should define security requirements.
+    message: "Operations should specify security requirements or explicitly mark as public."
+    severity: info
+    given: "$.paths[*][get,post,put,patch,delete]"
+    then:
+      field: security
+      function: truthy
+
+  # -----------------------------------------------------------------------
+  # 7. Parameter Rules
+  # -----------------------------------------------------------------------
+
+  todo-group-parameter-description-present:
+    description: All parameters should have descriptions.
+    message: "Parameter should include a description."
+    severity: warn
+    given: "$.paths[*][get,post,put,patch,delete].parameters[*]"
+    then:
+      field: description
+      function: truthy
+
+  todo-group-parameter-name-camel-case:
+    description: Parameter names should use camelCase.
+    message: "Parameter name should use camelCase."
+    severity: info
+    given: "$.paths[*][get,post,put,patch,delete].parameters[*].name"
+    then:
+      function: pattern
+      functionOptions:
+        match: "^[a-z][a-zA-Z0-9]*$"
+
+  # -----------------------------------------------------------------------
+  # 8. Open Source Specific Rules
+  # -----------------------------------------------------------------------
+
+  todo-group-external-docs-present:
+    description: API should link to external documentation.
+    message: "externalDocs is recommended for linking to full documentation."
+    severity: info
+    given: "$"
+    then:
+      field: externalDocs
+      function: truthy
+
+  todo-group-tags-defined:
+    description: Tags used in operations should be defined at the top level.
+    message: "Define all tags at the top level with descriptions."
+    severity: warn
+    given: "$.tags"
+    then:
+      function: truthy
