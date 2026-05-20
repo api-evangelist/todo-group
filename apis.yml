@@ -153,6 +153,8 @@ apis:
         url: https://github.com/todogroup/ospo-career-path
 
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/todo-group
   - type: Website
     url: https://todogroup.org/
   - type: Documentation
