@@ -153,6 +153,8 @@ apis:
         url: https://github.com/todogroup/ospo-career-path
 
 common:
+  - type: DomainSecurity
+    url: security/todo-group-domain-security.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/todo-group
   - type: Website
@@ -213,6 +215,8 @@ common:
         description: Repolinter is distributed as an npm package and supports Node.js 12+ runtime.
       - name: OpenSSF
         description: Collaboration with Open Source Security Foundation on best practices for open source security and compliance.
+  - type: Blog
+    url: https://todogroup.org/blog/
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
