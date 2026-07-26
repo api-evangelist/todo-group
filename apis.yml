@@ -9,16 +9,28 @@ description: >-
   programs. The TODO Group serves organizations managing enterprise open source
   strategies across 120+ member organizations.
 type: Index
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+    - plans
+  generated: '2026-07-22'
+  method: derived
 position: Consumer
 access: 3rd-Party
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/todo-group.png
 tags:
   - Community
   - Linux Foundation
   - Open Source
   - OSPO
 created: '2026-03-16'
-modified: '2026-05-03'
+modified: '2026-07-25'
 url: >-
   https://raw.githubusercontent.com/api-evangelist/todo-group/refs/heads/main/apis.yml
 specificationVersion: '0.19'
@@ -132,26 +144,6 @@ apis:
       - type: Website
         url: https://community.linuxfoundation.org/todo-group-ospology/
 
-  - aid: todo-group:ospo-career-path
-    name: OSPO Career Path
-    description: >-
-      An open source career development framework defining roles, skills, and
-      progression paths for OSPO professionals. Covers job functions from
-      open source program manager to legal counsel, providing organizations
-      with a structured approach to building and growing OSPO teams with
-      defined competencies and seniority levels.
-    humanURL: https://github.com/todogroup/ospo-career-path
-    tags:
-      - Career Development
-      - OSPO
-      - Human Resources
-      - Skills Framework
-    properties:
-      - type: Documentation
-        url: https://github.com/todogroup/ospo-career-path
-      - type: GitHubRepository
-        url: https://github.com/todogroup/ospo-career-path
-
 common:
   - type: DomainSecurity
     url: security/todo-group-domain-security.yml
@@ -217,6 +209,8 @@ common:
         description: Collaboration with Open Source Security Foundation on best practices for open source security and compliance.
   - type: Blog
     url: https://todogroup.org/blog/
+  - type: Careers
+    url: https://github.com/todogroup/ospo-career-path
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com

@@ -88,10 +88,6 @@ The OSPOlogy program provides monthly community webinars, working group meetings
 - [GitHubRepository](https://github.com/todogroup/ospology)
 - [Website](https://community.linuxfoundation.org/todo-group-ospology/)
 
-### OSPO Career Path
-An open source career development framework defining roles, skills, and progression paths for OSPO professionals. Covers job functions from open source program manager to legal counsel, providing organizations with a structured approach to building and growing OSPO teams with defined competencies and seniority levels.
-
-**Human URL:** [https://github.com/todogroup/ospo-career-path](https://github.com/todogroup/ospo-career-path)
 
 #### Tags:
 
