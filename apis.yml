@@ -145,6 +145,9 @@ apis:
         url: https://community.linuxfoundation.org/todo-group-ospology/
 
 common:
+  - type: License
+    name: Apache-2.0
+    url: https://github.com/todogroup/repolinter/blob/main/LICENSE
   - type: DomainSecurity
     url: security/todo-group-domain-security.yml
   - type: LinkedIn
