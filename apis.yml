@@ -27,6 +27,11 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/todo-group
 tags:
   - Community
   - Linux Foundation
+  - Open-Source
+  - OSPO
+tags_raw:
+  - Community
+  - Linux Foundation
   - Open Source
   - OSPO
 created: '2026-03-16'
@@ -46,6 +51,11 @@ apis:
       Installable via npm as the repolinter package.
     humanURL: https://github.com/todogroup/repolinter
     tags:
+      - Linting
+      - Open-Source
+      - Repository
+      - Compliance
+    tags_raw:
       - Linting
       - Open Source
       - Repository
