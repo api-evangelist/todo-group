@@ -9,6 +9,18 @@ description: >-
   programs. The TODO Group serves organizations managing enterprise open source
   strategies across 120+ member organizations.
 type: Index
+deliveryModel:
+  model: self-hosted
+  license: Apache-2.0
+  open_source: true
+  commercial: false
+  callable_host: false
+  label: Self-hosted open source · you run it yourself
+  confidence: high
+  source:
+  - license
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: unknown
@@ -155,6 +167,16 @@ apis:
         url: https://community.linuxfoundation.org/todo-group-ospology/
 
 common:
+  - type: IssueTracker
+    url: https://github.com/todogroup/repolinter/issues
+  - type: Releases
+    url: https://github.com/todogroup/repolinter/releases
+  - type: SecurityPolicy
+    url: https://github.com/todogroup/repolinter/blob/main/SECURITY.md
+  - type: CodeOfConduct
+    url: https://github.com/todogroup/repolinter/blob/main/CODE-OF-CONDUCT
+  - type: ContributionGuide
+    url: https://github.com/todogroup/repolinter/blob/main/CONTRIBUTING
   - type: License
     name: Apache-2.0
     url: https://github.com/todogroup/repolinter/blob/main/LICENSE
