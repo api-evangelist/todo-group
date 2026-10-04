@@ -39,13 +39,14 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/todo-group
 tags:
   - Community
   - Linux Foundation
-  - Open-Source
+  - Open Source
   - OSPO
 tags_raw:
   - Community
   - Linux Foundation
   - Open Source
   - OSPO
+  - Open-Source
 created: '2026-03-16'
 modified: '2026-07-25'
 url: >-
@@ -64,7 +65,7 @@ apis:
     humanURL: https://github.com/todogroup/repolinter
     tags:
       - Linting
-      - Open-Source
+      - Open Source
       - Repository
       - Compliance
     tags_raw:
@@ -72,6 +73,7 @@ apis:
       - Open Source
       - Repository
       - Compliance
+      - Open-Source
     properties:
       - type: Documentation
         url: https://github.com/todogroup/repolinter
