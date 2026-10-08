@@ -169,6 +169,12 @@ apis:
         url: https://community.linuxfoundation.org/todo-group-ospology/
 
 common:
+  - type: Plans
+    url: plans/todo-group-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/todo-group-rate-limits.yml
+  - type: FinOps
+    url: finops/todo-group-finops.yml
   - type: IssueTracker
     url: https://github.com/todogroup/repolinter/issues
   - type: Releases
