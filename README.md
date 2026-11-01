@@ -1,4 +1,4 @@
-# TODO Group (todo-group)
+# TODO Group
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,159 +66,117 @@
 
 The TODO Group is an open community of practitioners under the Linux Foundation who collaborate on best practices, tools, and guidance for running successful Open Source Program Offices (OSPOs). It provides open source tooling including Repolinter for repository linting, the OSPO Landscape mapping OSPO adopters and tools, comprehensive OSPO guides and case studies, and OSPOlogy community programs. The TODO Group serves organizations managing enterprise open source strategies across 120+ member organizations.
 
-**URL:** [https://todogroup.org/](https://todogroup.org/)
+**Areas:** Community · Linux Foundation · Open Source · OSPO
 
-## Tags:
+## TODO Group on APIs.io
 
- - Community, Linux Foundation, Open Source, OSPO
+Everything profiled for TODO Group is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/todo-group/](https://apis.io/providers/todo-group/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (5)
 
-- **Created:** 2026-03-16
-- **Modified:** 2026-05-03
+- [Repolinter](https://apis.io/apis/todo-group/repolinter/) — Repolinter is an open source linting tool for repositories that validates compliance with open source best practices. It checks repositories for standard…
+- [Repolinter Action](https://apis.io/apis/todo-group/repolinter-action/) — A GitHub Action that runs Repolinter on repositories as part of CI/CD workflows. Validates repositories against configurable rulesets to enforce open source…
+- [OSPO Landscape](https://apis.io/apis/todo-group/ospo-landscape/) — An interactive landscape mapping the Open Source Program Office ecosystem, including OSPO adopter organizations and tools supporting OSPO operations. Data…
+- [OSPO Guides](https://apis.io/apis/todo-group/ospo-guides/) — A comprehensive collection of 23+ practitioner guides covering all aspects of running Open Source Program Offices. Topics include creating an OSPO, setting…
+- [OSPOlogy](https://apis.io/apis/todo-group/ospology/) — The OSPOlogy program provides monthly community webinars, working group meetings, and collaborative sessions focused on OSPO practices and challenges. It…
 
-## Tools and Resources
+### Published properties
 
-### Repolinter
-Repolinter is an open source linting tool for repositories that validates compliance with open source best practices. It checks repositories for standard files like LICENSE, README, CONTRIBUTING, and CODE-OF-CONDUCT, and supports configurable rulesets. Available as a CLI tool (repolinter lint) and a JavaScript API for programmatic integration. Installable via npm as the repolinter package.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-**Human URL:** [https://github.com/todogroup/repolinter](https://github.com/todogroup/repolinter)
+#### Vocabulary (1)
 
-#### Tags:
+The provider's domain terms, defined.
 
- - Linting, Open Source, Repository, Compliance
+- [Todo Group Vocabulary](https://apis.io/vocabularies/todo-group/todo-group-vocabulary/)
 
-#### Properties
+#### Governance rules (1)
 
-- [Documentation](https://github.com/todogroup/repolinter)
-- [GitHubRepository](https://github.com/todogroup/repolinter)
-- [NpmPackage](https://www.npmjs.com/package/repolinter)
+Spectral rulesets for the provider's contracts.
 
-### Repolinter Action
-A GitHub Action that runs Repolinter on repositories as part of CI/CD workflows. Validates repositories against configurable rulesets to enforce open source compliance policies. Supports outputting results as exit codes for PR status checks or creating GitHub issues for non-intrusive notifications. Originally created by New Relic, maintained by TODO Group.
+- [TODO Group API Rules](https://apis.io/rules/todo-group/todo-group-spectral-rules/)
 
-**Human URL:** [https://github.com/todogroup/repolinter-action](https://github.com/todogroup/repolinter-action)
+#### Security (1)
 
-#### Tags:
+Authentication, trust centre, and vulnerability disclosure.
 
- - GitHub Actions, Linting, CI/CD, Compliance
+- [Todo Group Domain Security](https://apis.io/security/todo-group/todo-group-domain-security/)
 
-#### Properties
+#### Plans and pricing (1)
 
-- [Documentation](https://github.com/todogroup/repolinter-action)
-- [GitHubRepository](https://github.com/todogroup/repolinter-action)
-- [GitHubMarketplace](https://github.com/marketplace/actions/repolinter-action)
+Published plans, tiers and prices.
 
-### OSPO Landscape
-An interactive landscape mapping the Open Source Program Office ecosystem, including OSPO adopter organizations and tools supporting OSPO operations. Data is maintained in landscape.yml and browsable at landscape.todogroup.org. Modeled after the CNCF landscape approach, covering companies, governments, academic institutions, and supporting tooling.
+- [Todo Group Plans Pricing](https://apis.io/plans/todo-group/todo-group-plans-pricing/)
 
-**Human URL:** [https://landscape.todogroup.org/](https://landscape.todogroup.org/)
+#### Rate limits (1)
 
-#### Tags:
+Published request limits.
 
- - Landscape, OSPO, Ecosystem, Data
+- [Todo Group Rate Limits](https://apis.io/rate-limits/todo-group/todo-group-rate-limits/)
 
-#### Properties
+#### FinOps (1)
 
-- [Documentation](https://landscape.todogroup.org/)
-- [GitHubRepository](https://github.com/todogroup/ospolandscape)
-- [Website](https://landscape.todogroup.org/)
+What the API costs to run, by operation.
 
-### OSPO Guides
-A comprehensive collection of 23+ practitioner guides covering all aspects of running Open Source Program Offices. Topics include creating an OSPO, setting open source strategy, measuring program success, managing career development, recruiting open source developers, legal compliance, and community engagement. All guides are open source and community-contributed.
+- [Todo Group Finops](https://apis.io/finops/todo-group/todo-group-finops/)
 
-**Human URL:** [https://todogroup.org/guides/](https://todogroup.org/guides/)
+## Where to find this API
 
-#### Tags:
-
- - Guides, OSPO, Best Practices, Documentation
-
-#### Properties
-
-- [Documentation](https://todogroup.org/guides/)
-- [GitHubRepository](https://github.com/todogroup/guides)
-
-### OSPOlogy
-The OSPOlogy program provides monthly community webinars, working group meetings, and collaborative sessions focused on OSPO practices and challenges. It serves as the primary community engagement platform for TODO Group members and OSPO practitioners worldwide, covering topics from OSPO maturity models to specific industry challenges.
-
-**Human URL:** [https://community.linuxfoundation.org/todo-group-ospology/](https://community.linuxfoundation.org/todo-group-ospology/)
-
-#### Tags:
-
- - Community, Webinars, OSPO, Education
-
-#### Properties
-
-- [Documentation](https://github.com/todogroup/ospology)
-- [GitHubRepository](https://github.com/todogroup/ospology)
-- [Website](https://community.linuxfoundation.org/todo-group-ospology/)
-
-
-#### Tags:
-
- - Career Development, OSPO, Human Resources, Skills Framework
-
-#### Properties
-
-- [Documentation](https://github.com/todogroup/ospo-career-path)
-- [GitHubRepository](https://github.com/todogroup/ospo-career-path)
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://todogroup.org/)
 - [Documentation](https://todogroup.org/guides/)
-- [GitHub Organization](https://github.com/todogroup)
-- [Slack](https://slack.todogroup.org/)
-- [Newsletter](https://todogroup.org/community/newsletter/)
+- [Blog](https://todogroup.org/blog/)
 
-## Features
+## API Evangelist rating
 
-| Name | Description |
-|------|-------------|
-| Repolinter CLI | Command-line tool for linting open source repositories against configurable compliance rulesets. |
-| Repolinter JavaScript API | Programmatic Node.js API for integrating repository linting into custom workflows and tools. |
-| Repolinter GitHub Action | CI/CD integration for automated repository compliance checks in GitHub workflows. |
-| OSPO Landscape | Interactive ecosystem map of OSPO adopter organizations and supporting tools worldwide. |
-| OSPO Guides | Comprehensive practitioner guides covering all aspects of running an Open Source Program Office. |
-| OSPOlogy Webinars | Monthly community webinars and working group sessions for OSPO practitioners. |
-| OSPO Career Path | Structured career framework defining roles, skills, and progression paths for OSPO professionals. |
-| Awesome OSPO | Curated list of tools and resources for open source program management. |
+**Kin Score 26.2** — thin · rubric 0.24.0 · scored 2026-10-17
 
-## Use Cases
+| Facet | Score |
+|---|---|
+| Discoverability | 53.6 |
+| Contract quality | 0.0 |
+| Contract governance | 27.3 |
+| Operational transparency | 39.5 |
+| Developer ergonomics | 16.7 |
+| Access clarity | 7.9 |
 
-| Name | Description |
-|------|-------------|
-| Repository Compliance Automation | Use Repolinter and Repolinter Action to automate checks that all repos have required open source files and follow organizational policies. |
-| OSPO Program Launch | Use TODO Group guides and case studies to establish and launch a new Open Source Program Office within an organization. |
-| OSPO Ecosystem Mapping | Reference the OSPO Landscape to discover tools, peer organizations, and adopters in the OSPO ecosystem. |
-| Developer Career Development | Apply the OSPO Career Path framework to define roles and progression for open source professionals. |
-| Open Source Strategy Development | Leverage TODO Group best practice guides to define and implement an enterprise open source strategy. |
-| Community Building | Participate in OSPOlogy webinars and TODO Group working groups to learn from and contribute to the OSPO community. |
+**Agent readiness 0.6** — human-only
 
-## Integrations
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
 
-| Name | Description |
-|------|-------------|
-| GitHub Actions | Repolinter Action integrates repository linting into GitHub CI/CD workflows. |
-| Linux Foundation | TODO Group operates under the Linux Foundation governance and community infrastructure. |
-| CNCF Landscape | OSPO Landscape follows the CNCF landscape pattern for ecosystem visualization. |
-| Node.js / npm | Repolinter is distributed as an npm package and supports Node.js 12+ runtime. |
-| OpenSSF | Collaboration with Open Source Security Foundation on best practices for open source security and compliance. |
+**Regulatory alignment 10.8** — Horizontal (data, software, accessibility, platform)
 
-## Artifacts
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/todo-group/](https://apis.io/providers/todo-group/).
 
-Machine-readable specification artifacts organized by format.
+## How this profile is made
 
-### Rules
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
 
-- [TODO Group Spectral Rules](rules/todo-group-spectral-rules.yml)
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for TODO Group: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
 
-## Vocabulary
+## Open an issue
 
-- [TODO Group Vocabulary](vocabulary/todo-group-vocabulary.yaml) — Unified taxonomy mapping 7 resources, 7 actions, 3 workflows, and 5 personas across OSPO operational and capability dimensions
-
-## Maintainers
-
-**FN:** Kin Lane
-
-**Email:** kin@apievangelist.com
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/todo-group/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
